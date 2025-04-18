@@ -5,8 +5,12 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -21,23 +25,34 @@ import org.w3c.dom.Text
 @Composable
 fun MovieView (navController : NavController){
 
-    Column(modifier = Modifier.fillMaxSize().padding(8.dp, 70.dp, 8.dp, 10.dp),
+    Column(modifier = Modifier.fillMaxSize().padding(top = 70.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        OutlinedTextField(value = "" , onValueChange = {}, placeholder = { Text(text = "Movie Name") })
+        OutlinedTextField(value = "" ,
+            onValueChange = {},
+            placeholder = { Text(text = "Movie Name") },
+            modifier = Modifier.padding(start =40.dp,end=40.dp).fillMaxWidth()
+        )
         Spacer(modifier = Modifier.padding(2.dp))
-        Row (modifier = Modifier.fillMaxSize().padding(30.dp, 8.dp), horizontalArrangement = Arrangement.SpaceBetween ){
-            Text(text = "Hello")
+        MovieItemCard()
 
-            Text(text = "Hello")
-
-        }
         Spacer(modifier = Modifier.padding(6.dp))
-        Button(onClick = {}) {
-            Text(text = "Click me")
-        }
 
     }
+}
+@Composable
+fun MovieItemCard(){
+    Card(modifier = Modifier.fillMaxWidth().padding(start =40.dp,end=40.dp),
+        shape = RoundedCornerShape(8.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+    ) {
+        Row (modifier = Modifier.padding(10.dp).fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween ){
+            Text(text = "Hello")
+            Text(text = "Hello")
+
+        }
+    }
+
 }
 
 @Preview(showBackground = true)

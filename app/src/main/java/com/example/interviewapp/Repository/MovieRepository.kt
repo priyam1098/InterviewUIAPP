@@ -24,7 +24,7 @@ class MovieRepository @Inject constructor(private val repository: MovieInterface
 
         }
         catch (e: HttpException){
-            emit(Result.failure(Exception("Htttp Error ${e.message}")))
+            emit(Result.failure(Exception("Http Error ${e.message}")))
 
         }
 
