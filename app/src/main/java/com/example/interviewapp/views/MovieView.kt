@@ -14,13 +14,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.interviewapp.ui.theme.InterviewAppTheme
 import org.w3c.dom.Text
 
 @Composable
-fun MovieView (){
+fun MovieView (navController : NavController){
 
-    Column(modifier = Modifier.fillMaxSize().padding(8.dp, 30.dp, 8.dp, 10.dp),
+    Column(modifier = Modifier.fillMaxSize().padding(8.dp, 70.dp, 8.dp, 10.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         OutlinedTextField(value = "" , onValueChange = {}, placeholder = { Text(text = "Movie Name") })
@@ -43,6 +44,6 @@ fun MovieView (){
 @Composable
 fun MovieViewPreview() {
     InterviewAppTheme {
-        MovieView()
+        //MovieView(navController : NavController)
     }
 }

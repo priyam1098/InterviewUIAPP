@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.interviewapp.NavigationGraph.AppNavigation
 import com.example.interviewapp.ui.theme.InterviewAppTheme
 import com.example.interviewapp.views.MovieView
 
@@ -19,7 +20,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MovieViewPreview()
+            AppNavigation()
+            //MovieViewPreview()
         }
     }
 }
@@ -30,6 +32,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MovieViewPreview() {
     InterviewAppTheme {
-        MovieView()
+        //MovieView()
     }
 }

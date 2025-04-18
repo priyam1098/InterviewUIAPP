@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface MovieInterface {
 
-    @GET("api/v1/movies/1")
-    suspend fun getMovies():Response<MovieModel>
+    @GET("api/v1/movies")
+    suspend fun getMovies():Response<List<MovieModel>>
 }
