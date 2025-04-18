@@ -14,7 +14,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.interviewapp.NavigationGraph.AppNavigation
 import com.example.interviewapp.ui.theme.InterviewAppTheme
 import com.example.interviewapp.views.MovieView
+import dagger.hilt.EntryPoint
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

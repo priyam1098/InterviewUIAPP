@@ -64,6 +64,10 @@ dependencies {
     implementation("com.google.code.gson:gson:2.13.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("androidx.navigation:navigation-compose:2.8.6")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+    implementation("io.coil-kt:coil-compose:2.4.0")
+
 
 
 }
